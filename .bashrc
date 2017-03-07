@@ -58,7 +58,7 @@ esac
 # first to take advantage of user additions.
 # We run dircolors directly due to its changes in file syntax and
 # terminal name patching.
-use_color=false
+use_color=true
 if type -P dircolors >/dev/null ; then
 	# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
 	LS_COLORS=
@@ -96,6 +96,8 @@ if ${use_color} ; then
 
 	#BSD#@export CLICOLOR=1
 	#GNU#@alias ls='ls --color=auto'
+    alias ls='ls --color=auto'
+    alias diff='diff --color=auto'
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
