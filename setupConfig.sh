@@ -11,11 +11,11 @@ ln -s /home/$USER/.config/.linuxConfigs/termite.conf /home/$USER/.config/termite
 
 # zsh
 rm /home/$USER/.zshrc
-ln -s /home/$USER/.config/.linuxConfigs/zshrc /home/$USER/.zshrc
+ln -s /home/$USER/.config/.linuxConfigs/zshrc /home/$USER/.zshrc.local
 
 # Redshift
 mkdir -p /home/$USER/.config/redshift
 rm /home/$USER/.config/redshift/redshift.conf
 ln -s /home/$USER/.config/.linuxConfigs/redshift.conf /home/$USER/.config/redshift/redshift.conf
 
-#mkdir ~/bin
+mkdir -p /home/$USER/bin
