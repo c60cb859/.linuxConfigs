@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo pacman -S tmux termite zsh grml-zsh-config redshift fzf ripgrep bat
+sudo pacman -S tmux termite zsh grml-zsh-config fzf ripgrep bat
