@@ -1,7 +1,7 @@
 #
 # Enviroment variables
 #
-path+=('$HOME/bin')
+path+=($HOME/bin)
 export path
 export BROWSER=firefox
 export EDITOR=nvim
@@ -13,6 +13,7 @@ export VISUAL=nvim
 
 alias vi="nvim"
 alias vim="nvim"
+alias wiki="nvim -c VimwikiIndex"
 
 alias -s py=$EDITOR
 alias -s {c,cc,cpp,h,hpp}=$EDITOR
