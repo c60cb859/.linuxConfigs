@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Tmux
-rm /home/$USER/.tmux.conf
-ln -s /home/$USER/.config/.linuxConfigs/tmux.conf /home/$USER/.tmux.conf
-
 # Termite
 mkdir -p /home/$USER/.config/termite
 rm /home/$USER/.config/termite/config
