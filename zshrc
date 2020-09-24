@@ -26,12 +26,14 @@ setopt vi # sets vi-mode
 # fzf configs
 #
 
-FZF_DEFAULT_COMMAND='fd --type file --color=always --follow --hidden --exclude .git .cache'
+FZF_DEFAULT_COMMAND='fd --type file --color=always --follow --hidden --exclude .git --exclude .cache'
 FZF_DEFAULT_OPTS='--ansi '
 FZF_DEFAULT_OPTS+='--inline-info '
 FZF_DEFAULT_OPTS+='--cycle '
 FZF_DEFAULT_OPTS+='--reverse '
 FZF_DEFAULT_OPTS+='--preview-window=hidden --preview="bat --color always {}" --bind "ctrl-v:toggle-preview" '
+
+export FZF_DEFAULT_OPTS
 
 FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
