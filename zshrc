@@ -11,11 +11,29 @@ export VISUAL=nvim
 # alieases
 #
 
-alias vi="nvim"
-alias vim="nvim"
+alias vi="command nvim ${nvim_options:+${nvim_options[*]}}"
+alias vim="command nvim ${nvim_options:+${nvim_options[*]}}"
 alias wiki="nvim -c VimwikiIndex"
 
-alias cat="bat"
+alias cat="command bat ${bat_options:+${bat_options[*]}}"
+
+
+# list alieas
+alias ls="command exa ${exa_options:+${exa_options[*]}}"
+alias l="command exa --long --header --group --accessed --modified --git  ${exa_options:+${exa_options[*]}}"
+alias ll="command exa --long --header --group --accessed --modified --git  ${exa_options:+${exa_options[*]}}"
+alias la="command exa --long --header --group --accessed --modified --git  --all ${exa_options:+${exa_options[*]}}"
+
+alias tree="command exa --long --header --group --accessed --modified --git --tree --level=3 ${exa_options:+${exa_options[*]}}"
+
+
+# Pacman candy
+alias pac-install="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
+alias pac-remove="pacman -Qqe | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
+alias pac-info="pacman -Qq | fzf --multi --preview 'bat <(pacman -Qi {1}) <(pacman -Fl {1} | awk \"{print \$2}\")'"
+
+alias aur-install="yay -Slq --aur | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
+
 #
 # Misc
 #
@@ -27,6 +45,7 @@ setopt vi # sets vi-mode
 #
 
 FZF_DEFAULT_COMMAND='fd --type file --color=always --follow --hidden --exclude .git --exclude .cache'
+
 FZF_DEFAULT_OPTS='--ansi '
 FZF_DEFAULT_OPTS+='--inline-info '
 FZF_DEFAULT_OPTS+='--cycle '

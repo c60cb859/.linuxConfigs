@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo pacman -S \
+sudo pacman -S --needed\
 	termite\
 	zsh\
 	grml-zsh-config\
