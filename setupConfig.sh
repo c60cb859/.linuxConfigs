@@ -11,6 +11,8 @@ rm /home/$USER/.zshrc
 ln -s /home/$USER/.config/.linuxConfigs/zshrc /home/$USER/.zshrc.local
 touch /home/$USER/.zshrc
 
+sudo usermod --shell /bin/zsh $USER
+
 # bat
 mkdir -p /home/$USER/.config/bat
 rm /home/$USER/.config/bat/config
