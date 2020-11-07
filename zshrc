@@ -18,16 +18,6 @@ alias wiki="nvim -c VimwikiIndex"
 alias cat="command bat ${bat_options:+${bat_options[*]}}"
 alias cal="command task calendar ${cal_options:+${cal_options[*]}}"
 
-
-# list alieas
-alias ls="command exa ${exa_options:+${exa_options[*]}}"
-alias l="command exa --long --header --group --accessed --modified --git  ${exa_options:+${exa_options[*]}}"
-alias ll="command exa --long --header --group --accessed --modified --git  ${exa_options:+${exa_options[*]}}"
-alias la="command exa --long --header --group --accessed --modified --git  --all ${exa_options:+${exa_options[*]}}"
-
-alias tree="command exa --long --header --group --accessed --modified --git --tree --level=3 ${exa_options:+${exa_options[*]}}"
-
-
 # Pacman candy
 alias pac-install="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias pac-remove="pacman -Qqe | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
