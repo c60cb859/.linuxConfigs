@@ -16,6 +16,7 @@ alias vim="command nvim ${nvim_options:+${nvim_options[*]}}"
 alias wiki="nvim -c VimwikiIndex"
 
 alias cat="command bat ${bat_options:+${bat_options[*]}}"
+alias cal="command task calendar ${cal_options:+${cal_options[*]}}"
 
 
 # list alieas
