@@ -25,3 +25,10 @@ ln -s /home/$USER/.config/.linuxConfigs/redshift.conf /home/$USER/.config/redshi
 
 # Home bin
 mkdir -p /home/$USER/bin
+
+# color ssh
+rm /home/$USER/bin/color-term
+ln -s /home/$USER/.config/.linuxConfigs/ssh-colors/color-term.sh /home/$USER/bin/color-term
+
+rm /home/$USER/bin/color-ssh
+ln -s /home/$USER/.config/.linuxConfigs/ssh-colors/color-ssh.sh /home/$USER/bin/color-ssh
