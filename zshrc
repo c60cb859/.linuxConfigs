@@ -8,6 +8,7 @@ export BROWSER=firefox
 export EDITOR=nvim
 export VISUAL=nvim
 export ESPIDF=/opt/esp-idf
+export COLORTERM=truecolor
 
 #
 # alieases
