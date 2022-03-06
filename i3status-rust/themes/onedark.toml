@@ -1,0 +1,34 @@
+# +------------------------+
+# |onedark                 |
+# +------------------------+
+# | Black        | #282c34 |
+# | White        | #abb2bf |
+# | Light Red    | #e06c75 |
+# | Dark Red     | #be5046 |
+# | Green        | #98c379 |
+# | Light Yellow | #e5c07b |
+# | Dark Yellow  | #d19a66 |
+# | Blue         | #61afef |
+# | Magenta      | #c678dd |
+# | Cyan         | #56b6c2 |
+# | Gutter Grey  | #4b5263 |
+# | Comment Grey | #5c6370 |
+# +------------------------+
+
+idle_fg = "#abb2bf" # base1
+
+info_bg = "#61afef" # blue
+good_bg = "#98c379" # green
+warning_bg = "#e5c07b" # yellow
+critical_bg = "#be5046" # red
+
+idle_bg = "#282c34"
+info_fg = "#282c34"
+good_fg = "#282c34"
+warning_fg = "#282c34"
+critical_fg = "#282c34"
+
+#separator = ""
+separator = "<span font_family='Hack Nerd Font' font='13.4'></span>"
+separator_bg = "auto"
+separator_fg = "auto"

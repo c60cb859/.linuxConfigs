@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Termite
-mkdir -p /home/$USER/.config/termite
-rm /home/$USER/.config/termite/config
-ln -s /home/$USER/.config/.linuxConfigs/termite.conf /home/$USER/.config/termite/config
+# Alacritty
+mkdir -p /home/$USER/.config/alacritty
+rm /home/$USER/.config/alacritty/alacritty.yml
+ln -s /home/$USER/.config/.linuxConfigs/alacritty.yml /home/$USER/.config/alacritty/alacritty.yml
 
 # zsh
 rm /home/$USER/.zshrc.local
@@ -23,12 +23,14 @@ mkdir -p /home/$USER/.config/redshift
 rm /home/$USER/.config/redshift/redshift.conf
 ln -s /home/$USER/.config/.linuxConfigs/redshift.conf /home/$USER/.config/redshift/redshift.conf
 
-# Home bin
-mkdir -p /home/$USER/bin
+# i3
+rm /home/$USER/.config/i3
+ln -st /home/$USER/.config/ /home/$USER/.config/.linuxConfigs/i3
 
-# color ssh
-rm /home/$USER/bin/color-term
-ln -s /home/$USER/.config/.linuxConfigs/ssh-colors/color-term.sh /home/$USER/bin/color-term
+# i3status-rust
+rm /home/$USER/.config/i3status-rust
+ln -st /home/$USER/.config/ /home/$USER/.config/.linuxConfigs/i3status-rust
 
-rm /home/$USER/bin/color-ssh
-ln -s /home/$USER/.config/.linuxConfigs/ssh-colors/color-ssh.sh /home/$USER/bin/color-ssh
+# local scripts
+rm /home/$USER/.local/bin
+ln -st /home/$USER/.local/ /home/$USER/.config/.linuxConfigs/bin
