@@ -9,6 +9,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 export ESPIDF=/opt/esp-idf
 export COLORTERM=truecolor
+export XDG_CONFIG_HOME=~/.config/
 
 #
 # alieases
