@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Config
+# Test if file/folder/symlink exists
+# Delete if true
+# create new symlink
+
 # Alacritty
 mkdir -p /home/$USER/.config/alacritty
 rm /home/$USER/.config/alacritty/alacritty.yml
