@@ -1,45 +1,58 @@
 #!/bin/bash
 
-# Config
-# Test if file/folder/symlink exists
-# Delete if true
-# create new symlink
+USERDIR="/home/$USER"
+CONFIGDIR="$USERDIR/.config"
+LOCALBINDIR="$USERDIR/.local"
+LINUXCONFIGDIR="$CONFIGDIR/.linuxConfigs"
 
-# Alacritty
-mkdir -p /home/$USER/.config/alacritty
-rm /home/$USER/.config/alacritty/alacritty.yml
-ln -s /home/$USER/.config/.linuxConfigs/alacritty.yml /home/$USER/.config/alacritty/alacritty.yml
+setupZsh ()
+{
+  echo "Setitng up zsh"
 
-# zsh
-rm /home/$USER/.zshrc.local
-rm /home/$USER/.zshrc
-ln -s /home/$USER/.config/.linuxConfigs/zshrc /home/$USER/.zshrc.local
-touch /home/$USER/.zshrc
+  if [ -f "$USERDIR/.zshrc" ]; then
+    rm $USERDIR/.zshrc
+    touch $USERDIR/.zshrc
+  fi
 
-sudo usermod --shell /bin/zsh $USER
+  if [ -L "$USERDIR/.zshrc.local" ]; then
+    rm $USERDIR/.zshrc.local
+  fi
 
-# bat
-mkdir -p /home/$USER/.config/bat
-rm /home/$USER/.config/bat/config
-ln -s /home/$USER/.config/.linuxConfigs/bat.conf /home/$USER/.config/bat/config
+  ln -s $LINUXCONFIGDIR/zshrc $USERDIR/.zshrc.local
 
-# Redshift
-mkdir -p /home/$USER/.config/redshift
-rm /home/$USER/.config/redshift/redshift.conf
-ln -s /home/$USER/.config/.linuxConfigs/redshift.conf /home/$USER/.config/redshift/redshift.conf
+  if [ "$SHELL" != "/bin/zsh" ]; then
+    sudo usermod --shell /bin/zsh $USER
+  fi
+}
 
-# i3
-rm /home/$USER/.config/i3
-ln -st /home/$USER/.config/ /home/$USER/.config/.linuxConfigs/i3
+setupLocalBin ()
+{
+  echo "Setting up local bin"
+  if [ -d "$LOCALBINDIR/bin" ]; then
+    rm $LOCALBINDIR/bin
+  fi
 
-# rofi
-rm /home/$USER/.config/rofi
-ln -st /home/$USER/.config/ /home/$USER/.config/.linuxConfigs/rofi
+  ln -st $LOCALBINDIR/ $LINUXCONFIGDIR/bin
+}
 
-# i3status-rust
-rm /home/$USER/.config/i3status-rust
-ln -st /home/$USER/.config/ /home/$USER/.config/.linuxConfigs/i3status-rust
+linkConfig ()
+{
+  echo "Linking $1"
+  if [ -f "$CONFIGDIR/$1" ]; then
+    rm $CONFIGDIR/$1
+  elif [ -L "$CONFIGDIR/$1" ]; then
+    rm $CONFIGDIR/$1
+  elif [ -d "$CONFIGDIR/$1" ]; then
+    rm -rf $CONFIGDIR/$1
+  fi
 
-# local scripts
-rm /home/$USER/.local/bin
-ln -st /home/$USER/.local/ /home/$USER/.config/.linuxConfigs/bin
+  ln -st $CONFIGDIR/ $LINUXCONFIGDIR/$1
+}
+
+setupZsh
+setupLocalBin
+linkConfig alacritty
+linkConfig redshift
+linkConfig i3
+linkConfig i3status-rust
+linkConfig rofi
