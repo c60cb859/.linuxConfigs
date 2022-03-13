@@ -1,24 +1,22 @@
 #!/bin/bash
 
-USERDIR="/home/$USER"
-CONFIGDIR="$USERDIR/.config"
-LOCALBINDIR="$USERDIR/.local"
-LINUXCONFIGDIR="$CONFIGDIR/.linuxConfigs"
+LOCALBINDIR="$HOME/.local"
+LINUXCONFIGDIR="$XDG_CONFIG_HOME/.linuxConfigs"
 
 setupZsh ()
 {
   echo "Setitng up zsh"
 
-  if [ -f "$USERDIR/.zshrc" ]; then
-    rm $USERDIR/.zshrc
-    touch $USERDIR/.zshrc
+  if [ -f "$HOME/.zshrc" ]; then
+    rm $HOME/.zshrc
+    touch $HOME/.zshrc
   fi
 
-  if [ -L "$USERDIR/.zshrc.local" ]; then
-    rm $USERDIR/.zshrc.local
+  if [ -L "$HOME/.zshrc.local" ]; then
+    rm $HOME/.zshrc.local
   fi
 
-  ln -s $LINUXCONFIGDIR/zshrc $USERDIR/.zshrc.local
+  ln -s $LINUXCONFIGDIR/zshrc $HOME/.zshrc.local
 
   if [ "$SHELL" != "/bin/zsh" ]; then
     sudo usermod --shell /bin/zsh $USER
@@ -38,15 +36,15 @@ setupLocalBin ()
 linkConfig ()
 {
   echo "Linking $1"
-  if [ -f "$CONFIGDIR/$1" ]; then
-    rm $CONFIGDIR/$1
-  elif [ -L "$CONFIGDIR/$1" ]; then
-    rm $CONFIGDIR/$1
-  elif [ -d "$CONFIGDIR/$1" ]; then
-    rm -rf $CONFIGDIR/$1
+  if [ -f "$XDG_CONFIG_HOME/$1" ]; then
+    rm $XDG_CONFIG_HOME/$1
+  elif [ -L "$XDG_CONFIG_HOME/$1" ]; then
+    rm $XDG_CONFIG_HOME/$1
+  elif [ -d "$XDG_CONFIG_HOME/$1" ]; then
+    rm -rf $XDG_CONFIG_HOME/$1
   fi
 
-  ln -st $CONFIGDIR/ $LINUXCONFIGDIR/$1
+  ln -st $XDG_CONFIG_HOME/ $LINUXCONFIGDIR/$1
 }
 
 setupZsh

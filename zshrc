@@ -9,7 +9,13 @@ export EDITOR=nvim
 export VISUAL=nvim
 export ESPIDF=/opt/esp-idf
 export COLORTERM=truecolor
-export XDG_CONFIG_HOME=~/.config/
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+
+export BAT_CONFIG_PATH="$XDG_CONFIG_HOME/.linuxConfigs/bat/bat.conf"
 
 #
 # alieases
@@ -19,7 +25,6 @@ alias vi="command nvim ${nvim_options:+${nvim_options[*]}}"
 alias vim="command nvim ${nvim_options:+${nvim_options[*]}}"
 alias wiki="nvim -c VimwikiIndex"
 
-export BAT_CONFIG_PATH="$HOME/.config/.linuxConfigs/bat/bat.conf"
 alias cat="command bat ${bat_options:+${bat_options[*]}}"
 alias cal="command task calendar ${cal_options:+${cal_options[*]}}"
 
