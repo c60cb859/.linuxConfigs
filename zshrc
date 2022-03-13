@@ -4,10 +4,11 @@
 path+=($HOME/.local/bin)
 path+=($HOME/.local/share/gem/ruby/3.0.0/bin)
 export path
+
 export BROWSER=firefox
+export TERMINAL=alacritty
 export EDITOR=nvim
 export VISUAL=nvim
-export ESPIDF=/opt/esp-idf
 export COLORTERM=truecolor
 
 export XDG_CONFIG_HOME=$HOME/.config
@@ -15,7 +16,12 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
+export HISTFILE=$XDG_CACHE_HOME/zsh/history
+export HISTSIZE=5000
+export SAVEHIST=1000
+
 export BAT_CONFIG_PATH="$XDG_CONFIG_HOME/.linuxConfigs/bat/bat.conf"
+export ESPIDF=/opt/esp-idf
 
 #
 # alieases
