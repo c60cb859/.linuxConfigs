@@ -1,0 +1,113 @@
+* {
+  black: #282c34;
+  white: #abb2bf;
+  lightRed: #e06c75;
+  darkRed: #be5046;
+  green: #98c379;
+  lightYellow: #e5c07b;
+  darkYellow: #d19a66;
+  blue: #61afef;
+  magenta: #c678dd;
+  cyan: #56b6c2;
+  gutterGrey: #4b5263;
+  commentGrey: #5c6370;
+
+  emphasis: @green;
+  text: @blue;
+  text-alt: @darkRed;
+  fg: @gutterGrey;
+  bg: @black;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  spacing: 0;
+  background-color: transparent;
+
+  text-color: @text;
+}
+
+window {
+  border: 2px;
+  border-color: @blue;
+  border-radius: 6px;
+  padding: 5px;
+
+  transparency: "screenshot";
+	location: north;
+  y-offset: 50px;
+	background-color: #282c34dd;
+	width: 40%;
+}
+
+mainbox {
+  childern: [inputbar, message, listview];
+}
+
+inputbar {
+  padding: 10px 10px;
+  children: [entry, case-indicator];
+}
+
+prompt {
+  text-color: @darkYellow;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  margin: 0px 0px;
+}
+
+listview {
+	padding: 5px 5px;
+  spacing: 5px;
+	fixed-height: false;
+	scrollbar: false;
+	lines: 5;
+}
+
+element {
+  padding: 5px;
+  text-color: @text-alt;
+  border: 2px;
+}
+
+element selected {
+  border-color: @emphasis;
+  border-radius: 6px;
+}
+
+element-text selected {
+  text-color: @green;
+}
+
+element urgent, element selected urgent {
+  text-color: @lightRed;
+}
+
+element active, element selected active {
+  text-color: @magenta;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+  border: 1px;
+  border-color: @cyan;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+}
+
+/* vim:ft=css

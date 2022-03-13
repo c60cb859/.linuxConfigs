@@ -1,0 +1,25 @@
+configuration {
+  modi: "drun,window,combi";
+  font: "Hack Nerd Font 13";
+  combi-modi: "drun,window";
+
+  drun {
+    display-name: "";
+  }
+
+  run {
+    display-name: "";
+  }
+
+  window {
+    display-name: "ﬓ";
+  }
+
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+}
+@theme "onedark"
+
+/* vim:ft=css

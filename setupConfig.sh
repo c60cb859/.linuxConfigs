@@ -27,6 +27,10 @@ ln -s /home/$USER/.config/.linuxConfigs/redshift.conf /home/$USER/.config/redshi
 rm /home/$USER/.config/i3
 ln -st /home/$USER/.config/ /home/$USER/.config/.linuxConfigs/i3
 
+# rofi
+rm /home/$USER/.config/rofi
+ln -st /home/$USER/.config/ /home/$USER/.config/.linuxConfigs/rofi
+
 # i3status-rust
 rm /home/$USER/.config/i3status-rust
 ln -st /home/$USER/.config/ /home/$USER/.config/.linuxConfigs/i3status-rust
