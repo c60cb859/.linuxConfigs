@@ -34,10 +34,6 @@ alias wiki="nvim -c VimwikiIndex"
 alias cat="command bat ${bat_options:+${bat_options[*]}}"
 alias cal="command task calendar ${cal_options:+${cal_options[*]}}"
 
-# Color ssh
-compdef _ssh color-ssh=ssh
-alias ssh=color-ssh
-
 # Pacman candy
 alias pac-install="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias pac-remove="pacman -Qqe | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
