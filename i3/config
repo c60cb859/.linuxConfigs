@@ -162,9 +162,43 @@ bindsym $mod+d mode "resize"
 # Disable mouse resize
 bindsym --border button1 nop
 
+# Setup multiple monitors
+exec --no-startup-id xrandr --output DP-2 --below DP-0 --auto
+
+set $topMonitor DP-0
+set $botMonitor DP-2
+
 bar {
+  id bar-1
   font pango:Hack Nerd Font 10
   status_command i3status-rs
+
+  output $botMonitor
+  position bottom
+  tray_output $topMonitor
+
+  colors
+  {
+    background $black
+    statusline $blue
+    separator  $magenta
+                       #border  Backgr.     text
+    focused_workspace  $blue    $blue       $black
+    active_workspace   $blue    $blue       $black
+    inactive_workspace $blue    $gutterGrey $blue
+    urgent_workspace   $darkRed $darkRed    $white
+    binding_mode       $darkRed $darkRed    $white
+  }
+}
+
+bar {
+  id bar-2
+  font pango:Hack Nerd Font 10
+  status_command i3status-rs
+
+  output $topMonitor
+  position top
+
 
   colors
   {
@@ -183,11 +217,18 @@ bar {
 # assign applications
 assign [class=$terminal] 2
 
+
 # wallpaper
-exec feh --bg-fill ~/wallpapers/lake.jpg
+exec ~/bin/setWallpapers
 
 # autostart
 exec dunst
 exec redshift
 exec unclutter
 exec flameshot
+exec nextcloud
+exec guake -e tmux-guake
+
+exec firefox
+exec --no-startup-id i3-msg 'workspace $ws1; exec tmux-web; workspace $ws1'
+exec --no-startup-id i3-msg 'workspace $ws2; exec tmux-main; workspace $ws1'
