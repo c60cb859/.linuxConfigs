@@ -1,0 +1,5 @@
+# Lockscreen
+set $dimScreen $config/scripts/dim-screen.sh
+set $wallpaper ~/wallpapers/lake.png
+exec xset s 60 180
+exec --no-startup-id xss-lock -n $dimScreen --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --show-failed-attempts -i $wallpaper

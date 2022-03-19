@@ -1,0 +1,16 @@
+bar {
+  status_command i3status-rs
+
+  colors
+  {
+    background $black
+    statusline $blue
+    separator  $magenta
+                       #border  Backgr.     text
+    focused_workspace  $blue    $blue       $black
+    active_workspace   $blue    $blue       $black
+    inactive_workspace $blue    $gutterGrey $blue
+    urgent_workspace   $darkRed $darkRed    $white
+    binding_mode       $darkRed $darkRed    $white
+  }
+}

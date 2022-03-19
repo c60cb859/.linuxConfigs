@@ -28,7 +28,7 @@ interval = 5
 
 [[block]]
 block = "backlight"
-if_command = "test -e /sys/class/backlight/brightness"
+if_command = "test -e /sys/class/backlight/intel_backlight/brightness"
 
 [[block]]
 block = "time"

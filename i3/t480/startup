@@ -1,0 +1,5 @@
+# autostart
+exec dunst
+exec redshift
+exec unclutter
+exec flameshot

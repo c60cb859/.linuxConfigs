@@ -1,0 +1,12 @@
+# borders
+default_border pixel 1
+hide_edge_borders both
+
+# class                 border       backgr.     text   indicator    child_border
+client.focused          $blue        $black      $blue  $blue        $blue
+client.focused_inactive $black       $gutterGrey $white $commentGrey $gutterGrey
+client.unfocused        $commentGrey $black      $white $gutterGrey  $black
+client.urgent           $black       $darkRed    $white $darkRed     $darkRed
+client.placeholder      $black  	   $gutterGrey $white $black       $gutterGrey
+
+client.background       $white

@@ -1,0 +1,46 @@
+set $topMonitor DP-0
+set $botMonitor DP-2
+
+bar {
+  id bottom
+  status_command i3status-rs
+
+  output $botMonitor
+  position bottom
+  tray_output $topMonitor
+
+  colors
+  {
+    background $black
+    statusline $blue
+    separator  $magenta
+                       #border  Backgr.     text
+    focused_workspace  $blue    $blue       $black
+    active_workspace   $blue    $blue       $black
+    inactive_workspace $blue    $gutterGrey $blue
+    urgent_workspace   $darkRed $darkRed    $white
+    binding_mode       $darkRed $darkRed    $white
+  }
+}
+
+bar {
+  id top
+  status_command i3status-rs
+
+  output $topMonitor
+  position top
+  tray_output $topMonitor
+
+  colors
+  {
+    background $black
+    statusline $blue
+    separator  $magenta
+                       #border  Backgr.     text
+    focused_workspace  $blue    $blue       $black
+    active_workspace   $blue    $blue       $black
+    inactive_workspace $blue    $gutterGrey $blue
+    urgent_workspace   $darkRed $darkRed    $white
+    binding_mode       $darkRed $darkRed    $white
+  }
+}

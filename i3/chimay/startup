@@ -1,0 +1,11 @@
+# autostart
+exec dunst
+exec redshift
+exec unclutter
+exec flameshot
+exec nextcloud
+exec guake -e tmux-guake
+
+#exec firefox
+#exec --no-startup-id i3-msg 'workspace $ws1; exec tmux-web; workspace $ws1'
+#exec --no-startup-id i3-msg 'workspace $ws2; exec tmux-main; workspace $ws1'
