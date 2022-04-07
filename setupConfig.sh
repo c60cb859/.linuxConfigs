@@ -55,3 +55,4 @@ linkConfig i3
 linkConfig i3status-rust
 linkConfig rofi
 linkConfig tig
+linkConfig radare2
