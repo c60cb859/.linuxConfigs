@@ -1,2 +1,2 @@
 # wallpaper
-exec ~/.local/bin/setWallpapers
+exec feh --bg-fill ~/wallpapers/f50.jpg

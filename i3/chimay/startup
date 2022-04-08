@@ -1,11 +1,16 @@
 # autostart
+exec xrandr --output DP-0 --mode 5120x1440 --above DP-2 --output DP-2 --mode 5120x1440
 exec dunst
 exec redshift
 exec unclutter
 exec flameshot
-exec nextcloud
+#exec vm-nat
+#exec nextcloud
 exec guake -e tmux-guake
 
-#exec firefox
-#exec --no-startup-id i3-msg 'workspace $ws1; exec tmux-web; workspace $ws1'
-#exec --no-startup-id i3-msg 'workspace $ws2; exec tmux-main; workspace $ws1'
+workspace "1" output DP-0
+workspace "2" output DP-2
+
+exec firefox
+exec --no-startup-id i3-msg "workspace 1; exec tmux-web"
+exec --no-startup-id i3-msg "workspace 2; exec tmux-main"
