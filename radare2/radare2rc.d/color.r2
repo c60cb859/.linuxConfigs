@@ -10,6 +10,7 @@ ec gui.border rgb:282c34
 # White         rgb:abb2bf
 ec nop rgb:abb2bf
 ec input rgb:abb2bf
+ec b0x7f rgb:abb2bf
 
 # Light Red     rgb:e06c75
 ec invalid rgb:e06c75
@@ -59,7 +60,6 @@ ec graph.diff.unmatch rgb:d19a66
 ec offset rgb:d19a66
 
 # Blue          rgb:61afef
-ec b0x7f rgb:61afef
 ec other rgb:61afef
 ec push rgb:61afef
 ec pop rgb:61afef
