@@ -3,6 +3,7 @@
 #
 path+=($HOME/.local/bin)
 path+=($HOME/.local/share/gem/ruby/3.0.0/bin)
+path+=($HOME/.cargo/env)
 export path
 
 export BROWSER=firefox
