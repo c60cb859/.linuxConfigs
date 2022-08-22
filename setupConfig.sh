@@ -56,3 +56,4 @@ linkConfig i3status-rust
 linkConfig rofi
 linkConfig tig
 linkConfig radare2
+linkConfig xsettingsd

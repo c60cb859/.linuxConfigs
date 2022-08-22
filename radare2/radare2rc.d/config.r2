@@ -1,6 +1,7 @@
 # Config
 e bin.cache = true
 
+# Assembly
 e asm.slow = true
 e asm.lines = true
 e asm.lines.fcn = true
@@ -14,11 +15,15 @@ e asm.tabs = 6
 e asm.tabs.off = 0
 e asm.cmt.col = 75
 
+# Graph
+e graph.font = Hack Nerd Font
+
+
 # Ghidra
 e r2ghidra.casts = false
 e r2ghidra.cmt.cpp = true
-e r2ghidra.cmt.indent = 2
-e r2ghidra.indent = 2
+e r2ghidra.cmt.indent = 4
+e r2ghidra.indent = 4
 e r2ghidra.linelen = 120
 e r2ghidra.maximplref = 2
 e r2ghidra.rawptr = true

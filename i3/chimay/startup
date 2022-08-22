@@ -1,5 +1,6 @@
 # autostart
 exec xrandr --output DP-0 --mode 5120x1440 --above DP-2 --output DP-2 --mode 5120x1440
+exec ibus-daemon -drxR
 exec dunst
 exec redshift
 exec unclutter

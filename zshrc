@@ -2,6 +2,7 @@
 # Enviroment variables
 #
 path+=($HOME/.local/bin)
+path+=($HOME/.cargo/env)
 path+=($HOME/.local/share/gem/ruby/3.0.0/bin)
 path+=($HOME/.cargo/env)
 export path
@@ -34,6 +35,8 @@ alias wiki="nvim -c VimwikiIndex"
 
 alias cat="command bat ${bat_options:+${bat_options[*]}}"
 alias cal="command task calendar ${cal_options:+${cal_options[*]}}"
+
+alias glow="command glow -l ${glow_options:+${glow_options[*]}}"
 
 # Pacman candy
 alias pac-install="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"

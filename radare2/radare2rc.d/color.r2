@@ -37,6 +37,7 @@ ec widget_sel rgb:0c0c0c rgb:98c379
 ec ai.read rgb:98c379
 ec graph.true rgb:98c379
 ec cmp rgb:98c379
+ec btext rgb:98c379
 
 # Light Yellow  rgb:e5c07b
 ec bin rgb:e5c07b
@@ -44,7 +45,6 @@ ec reg rgb:e5c07b
 ec creg rgb:e5c07b
 ec usrcmt rgb:e5c07b
 ec ai.ascii rgb:e5c07b
-ec btext rgb:e5c07b
 
 # Dark Yellow   rgb:d19a66
 ec args rgb:d19a66
