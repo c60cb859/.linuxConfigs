@@ -27,5 +27,5 @@ e r2ghidra.indent = 4
 e r2ghidra.linelen = 120
 e r2ghidra.maximplref = 2
 e r2ghidra.rawptr = true
-e r2ghidra.sleighhome = /usr/lib/radare2/5.6.6/r2ghidra_sleigh
+e r2ghidra.sleighhome = /usr/lib/radare2/last/r2ghidra_sleigh
 e r2ghidra.verbose = false

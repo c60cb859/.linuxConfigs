@@ -39,13 +39,13 @@ format = "%a %d/%m %R"
 [[block]]
 block = "battery"
 device = "BAT0"
-format = " $time $percentage$power"
+format = " $time $percentage $power"
 full_format = " $percentage"
-empty_format = " $percentage"
+empty_format = " "
 
 [[block]]
 block = "battery"
 device = "BAT1"
-format = " $time $percentage$power"
+format = " $time $percentage $power"
 full_format = " $percentage"
-empty_format = " $percentage"
+empty_format = " "
