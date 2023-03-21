@@ -1,5 +1,7 @@
 # Config
 e bin.cache = true
+e scr.prompt.vi = true
+e scr.prompt.mode = true
 
 # Assembly
 e asm.slow = true

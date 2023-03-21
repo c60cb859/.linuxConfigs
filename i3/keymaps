@@ -54,6 +54,10 @@ bindsym $mod+Down move workspace to output down
 bindsym $mod+Up move workspace to output up
 bindsym $mod+Right move workspace to output right
 
+# Move to next workspace
+bindsym $mod+period workspace next_on_output
+bindsym $mod+comma workspace prev_on_output
+
 # scratchpad
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad

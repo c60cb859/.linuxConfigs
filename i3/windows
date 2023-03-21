@@ -1,0 +1,4 @@
+# enable floating mode for windows
+for_window [class="TelegramDesktop"] floating enable
+for_window [class="Signal"] floating enable
+

@@ -24,6 +24,7 @@ set $commentGrey  #5c6370
 include $config/boarders
 include $config/workspaces
 include $config/keymaps
+include $config/windows
 
 # Hosts
 include $config/`hostname`/wallpaper

@@ -1,5 +1,5 @@
 # autostart
-exec xrandr --output DP-0 --mode 5120x1440 --above DP-2 --output DP-2 --mode 5120x1440
+# exec xrandr --output DP-0 --mode 5120x1440 --above DP-2 --output DP-2 --mode 5120x1440
 exec ibus-daemon -drxR
 exec dunst
 exec redshift
@@ -9,8 +9,8 @@ exec flameshot
 #exec nextcloud
 exec guake -e tmux-guake
 
-workspace "1" output DP-0
-workspace "2" output DP-2
+# workspace "4" output DP-0
+# workspace "1" output DP-2
 
 exec firefox
 exec --no-startup-id i3-msg "workspace 1; exec tmux-web"

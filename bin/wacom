@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#xsetwacom set $DEVICE MapToOutput HEAD-1
+
+# Active area
+# 216.0 x 135.0 mm (8.5 x 5.3 in)
+#
+# Landscape mode
+# height = 1440
+# width = height/135.0*216.0 = 2304
+#
+# xsetwacom set 'Wacom One by Wacom M Pen stylus' MapToOutput 2304x1440+1408+0
+#
+# Portrait mode
+# height = 1440
+# width = height/216.0*135.0 = 900
+#
+xsetwacom set 'Wacom One by Wacom M Pen stylus' MapToOutput 1440x2304+2560-864
+xsetwacom set 'Wacom One by Wacom M Pen stylus' rotate ccw
+
+
+xsetwacom set 'Wacom One by Wacom M Pen stylus' Button 2 0

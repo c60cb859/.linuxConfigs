@@ -11,8 +11,7 @@ format_alt = "$utilization.eng() $frequency.eng() $barchart.str()"
 
 [[block]]
 block = "memory"
-format_mem = "$mem_used_percents.eng()"
-clickable = false
+format = "$mem_used_percents.eng(2)"
 interval = 1
 warning_mem = 70
 critical_mem = 90
@@ -28,6 +27,7 @@ block = "net"
 format = " {$signal_strength $ssid $frequency|Wired} $device"
 
 [[block]]
+if_command = "test -e /sys/class/backlight/intel_backlight/brightness"
 block = "backlight"
 device = "intel_backlight"
 
@@ -38,6 +38,7 @@ format = "%a %d/%m %R"
 
 [[block]]
 block = "battery"
+if_command = "test -e /sys/class/power_supply/BAT0"
 device = "BAT0"
 format = " $time $percentage $power"
 full_format = " $percentage"
@@ -45,6 +46,7 @@ empty_format = " "
 
 [[block]]
 block = "battery"
+if_command = "test -e /sys/class/power_supply/BAT1"
 device = "BAT1"
 format = " $time $percentage $power"
 full_format = " $percentage"
