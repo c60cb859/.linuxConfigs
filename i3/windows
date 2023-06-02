@@ -1,4 +1,7 @@
+# To find class name use xprop
 # enable floating mode for windows
 for_window [class="TelegramDesktop"] floating enable
 for_window [class="Signal"] floating enable
+for_window [class="Steam"] floating enable
+for_window [class="discord"] floating enable
 

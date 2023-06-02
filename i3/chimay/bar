@@ -1,10 +1,5 @@
-set $botMonitor DP-2
-
 bar {
-  id bottom
   status_command i3status-rs
-
-  output $botMonitor
   position top
 
   colors
