@@ -25,6 +25,8 @@ export SAVEHIST=1000
 export BAT_CONFIG_PATH="$XDG_CONFIG_HOME/.linuxConfigs/bat/bat.conf"
 export ESPIDF=/opt/esp-idf
 
+autoload -U compinit; compinit
+
 #
 # alieases
 #
