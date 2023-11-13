@@ -3,6 +3,7 @@
 #
 path+=($HOME/.local/bin)
 path+=($HOME/.cargo/env)
+path+=($HOME/.cargo/bin)
 path+=($HOME/.local/share/gem/ruby/3.0.0/bin)
 path+=($HOME/.cargo/env)
 export path
@@ -29,8 +30,6 @@ autoload -U compinit; compinit
 
 #
 # alieases
-#
-
 alias vi="command nvim ${nvim_options:+${nvim_options[*]}}"
 alias vim="command nvim ${nvim_options:+${nvim_options[*]}}"
 alias wiki="nvim -c VimwikiIndex"

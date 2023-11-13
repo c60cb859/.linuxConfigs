@@ -1,4 +1,0 @@
-# Lockscreen
-set $wallpaper ~/wallpapers/space.png
-exec xset s 600
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --show-failed-attempts -i $wallpaper

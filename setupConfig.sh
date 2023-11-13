@@ -58,3 +58,4 @@ linkConfig tig
 linkConfig radare2
 linkConfig xsettingsd
 linkConfig rizin
+linkConfig zellij
