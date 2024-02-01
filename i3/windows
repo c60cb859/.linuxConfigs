@@ -4,4 +4,7 @@ for_window [class="TelegramDesktop"] floating enable
 for_window [class="Signal"] floating enable
 for_window [class="Steam"] floating enable
 for_window [class="discord"] floating enable
+for_window [class="Spotify"] floating enable
+# for_window [class="guake"] floating enable
+for_window [title="Preferences$"] floating enable
 

@@ -6,25 +6,47 @@ icons = "awesome5"
 [[block]]
 block = "cpu"
 interval = 1
-format = " $icon $utilization.eng() $frequency.eng()"
+format = "$icon $utilization.eng() $frequency.eng(w:3) "
 format_alt = "$utilization.eng() $frequency.eng() $barchart.str()"
 
 [[block]]
 block = "memory"
-format = " $icon $mem_used_percents.eng(w:2)"
+format = " $icon $mem_used_percents.eng(w:3) "
 interval = 1
 warning_mem = 70
 critical_mem = 90
 
 [[block]]
 block = "disk_space"
+path = "/"
 info_type = "available"
 alert_unit = "GB"
-format = " $icon $available.eng(w:2)"
+format = "$icon $path $available.eng(w:5) "
+
+[[block]]
+block = "disk_space"
+path = "/boot"
+info_type = "available"
+alert_unit = "MB"
+format = "$icon $path $available.eng(w:5) "
+
+[[block]]
+block = "disk_space"
+path = "/mnt/old_system"
+info_type = "available"
+alert_unit = "GB"
+format = "$icon $path $available.eng(w:5) "
+
+[[block]]
+block = "disk_space"
+path = "/mnt/data"
+info_type = "available"
+alert_unit = "GB"
+format = "$icon $path $available.eng(w:5) "
 
 [[block]]
 block = "net"
-format = " $icon  {$signal_strength $ssid $frequency|Wired} $device"
+format = " $icon  {$signal_strength $ssid $frequency|Wired} $device "
 
 [[block]]
 if_command = "test -e /sys/class/backlight/intel_backlight/brightness"
@@ -35,7 +57,13 @@ device = "intel_backlight"
 block = "time"
 interval = 5
 [block.format]
-full = "$icon $timestamp.datetime(f:'%d/%m %R') "
+full = "$icon $timestamp.datetime(f:'%d/%m') "
+
+[[block]]
+block = "time"
+interval = 5
+[block.format]
+full = "$timestamp.datetime(f:'%R') "
 
 [[block]]
 block = "battery"

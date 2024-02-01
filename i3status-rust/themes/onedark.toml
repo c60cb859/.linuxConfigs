@@ -15,20 +15,21 @@
 # | Comment Grey | #5c6370 |
 # +------------------------+
 
-idle_fg = "#abb2bf" # base1
-
+idle_fg = "#abb2bf" # white
 info_bg = "#61afef" # blue
 good_bg = "#98c379" # green
 warning_bg = "#e5c07b" # yellow
 critical_bg = "#be5046" # red
 
-idle_bg = "#282c34"
-info_fg = "#282c34"
-good_fg = "#282c34"
-warning_fg = "#282c34"
-critical_fg = "#282c34"
+idle_bg = "#282c34" # black
+info_fg = "#282c34" # black
+good_fg = "#282c34" # black
+warning_fg = "#282c34" # black
+critical_fg = "#282c34" # black
 
-#separator = ""
 separator = "<span font_family='Hack Nerd Font' font='13.4'></span>"
 separator_bg = "auto"
 separator_fg = "auto"
+
+alternating_tint_bg = "#282c34"
+alternating_tint_fg = "#282c34"

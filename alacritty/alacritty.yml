@@ -17,7 +17,7 @@ font:
   bold_italic:
     family: Hack Nerd Font
     style: Bold Italic
-  size: 6.5
+  size: 10
 
 # Colors (One Dark)
 colors:
@@ -42,3 +42,7 @@ colors:
     magenta: "#c678dd"
     cyan: "#56b6c2"
     white: "#ffffff"
+
+key_bindings:
+  - { key: Return, mods: Shift, chars: "\x1b[13;2u" }
+  - { key: Return, mods: Control, chars: "\x1b[13;5u" }

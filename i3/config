@@ -4,7 +4,7 @@ set $terminal alacritty
 set $config $XDG_CONFIG_HOME/i3
 
 # Font
-font pango:Hack Nerd Font 10
+font pango:Hack Nerd Font 9
 
 # OneDark
 set $black        #282c34
